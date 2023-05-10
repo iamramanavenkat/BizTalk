@@ -1,0 +1,157 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="df1442be-1c58-4012-8fc2-5ff413666828" LowerBound="1.1" HigherBound="33.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="ExposeSchemaAsWebService" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="ServiceDeclaration" OID="5272d67b-a92c-48b1-ad24-a7c233d54d15" ParentLink="Module_ServiceDeclaration" LowerBound="11.1" HigherBound="32.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="LoadData" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="ServiceBody" OID="814864e4-17b7-4d90-989a-42b5ad927fa4" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="b898ed45-4ad9-4d2f-bc70-7b07869d9ebd" ParentLink="ServiceBody_Statement" LowerBound="20.1" HigherBound="22.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="ReceiveData" />
+                    <om:Property Name="MessageName" Value="ReceiveMsg" />
+                    <om:Property Name="OperationName" Value="Receive" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ReceiveData" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Construct" OID="e9d425bf-4614-4a50-af92-be40a0163956" ParentLink="ServiceBody_Statement" LowerBound="22.1" HigherBound="28.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ConstructData" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="Transform" OID="70f5878a-aed1-4760-8b46-d896fdc9fe87" ParentLink="ComplexStatement_Statement" LowerBound="25.1" HigherBound="27.1">
+                        <om:Property Name="ClassName" Value="ExposeSchemaAsWebService.ConnectMap" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Transform_1" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="MessagePartRef" OID="7dd5e647-a24c-4ca9-8a62-db1fbc719458" ParentLink="Transform_InputMessagePartRef" LowerBound="26.76" HigherBound="26.86">
+                            <om:Property Name="MessageRef" Value="ReceiveMsg" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_1" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessagePartRef" OID="db5fc4e0-4b99-480d-8973-9da8406f859e" ParentLink="Transform_OutputMessagePartRef" LowerBound="26.28" HigherBound="26.35">
+                            <om:Property Name="MessageRef" Value="SendMsg" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_2" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="dd297922-59a3-43e1-8adc-842939dfccbf" ParentLink="Construct_MessageRef" LowerBound="23.23" HigherBound="23.30">
+                        <om:Property Name="Ref" Value="SendMsg" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="b9933672-9e46-4f1f-bf82-13c77a5ffbf3" ParentLink="ServiceBody_Statement" LowerBound="28.1" HigherBound="30.1">
+                    <om:Property Name="PortName" Value="ReceiveData" />
+                    <om:Property Name="MessageName" Value="SendMsg" />
+                    <om:Property Name="OperationName" Value="Receive" />
+                    <om:Property Name="OperationMessageName" Value="Response" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="SendData" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="50fa8973-d8e8-44b9-b7ec-e12627a89c28" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="14.1" HigherBound="16.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="ExposeSchemaAsWebService.ReceiveData_PT" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ReceiveData" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="4cc66cda-5646-40f8-bc82-6fd553ced267" ParentLink="PortDeclaration_CLRAttribute" LowerBound="14.1" HigherBound="15.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="732e6ff2-4f2a-4280-b341-9849e717740e" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="16.1" HigherBound="17.1">
+                <om:Property Name="Type" Value="ExposeSchemaAsWebService.InputSchema" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ReceiveMsg" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="54cb9b69-b122-4b49-80dc-d1b1001313bc" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="17.1" HigherBound="18.1">
+                <om:Property Name="Type" Value="ExposeSchemaAsWebService.OutputSchema" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SendMsg" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="61d03389-4096-4fc9-ab3e-2c38eb4dab42" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="ReceiveData_PT" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="ffc40122-e030-46db-9093-3d2542823d33" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Receive" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="54e92354-498b-48ab-8c9a-d3d2707b0458" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.24">
+                    <om:Property Name="Ref" Value="ExposeSchemaAsWebService.InputSchema" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="4b33796c-fee7-44c3-bd58-ac29c814109a" ParentLink="OperationDeclaration_ResponseMessageRef" LowerBound="8.26" HigherBound="8.38">
+                    <om:Property Name="Ref" Value="ExposeSchemaAsWebService.OutputSchema" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module ExposeSchemaAsWebService
+{
+    internal porttype ReceiveData_PT
+    {
+        requestresponse Receive
+        {
+            InputSchema, OutputSchema
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service LoadData
+    {
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port implements ReceiveData_PT ReceiveData;
+        message InputSchema ReceiveMsg;
+        message OutputSchema SendMsg;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("b898ed45-4ad9-4d2f-bc70-7b07869d9ebd")]
+            activate receive (ReceiveData.Receive, ReceiveMsg);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("e9d425bf-4614-4a50-af92-be40a0163956")]
+            construct SendMsg
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("70f5878a-aed1-4760-8b46-d896fdc9fe87")]
+                transform (SendMsg) = ExposeSchemaAsWebService.ConnectMap (ReceiveMsg);
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("b9933672-9e46-4f1f-bf82-13c77a5ffbf3")]
+            send (ReceiveData.Receive, SendMsg);
+        }
+    }
+}
+

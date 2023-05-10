@@ -1,0 +1,5 @@
+C:\Users\ramanarajan.d\OneDrive - MSC\BizTalk\POC\ExposeSchemaAsWebService\ExposeSchemaAsWebService\bin\Debug\ExposeSchemaAsWebService.dll
+C:\Users\ramanarajan.d\OneDrive - MSC\BizTalk\POC\ExposeSchemaAsWebService\ExposeSchemaAsWebService\bin\Debug\ExposeSchemaAsWebService.pdb
+C:\Users\ramanarajan.d\OneDrive - MSC\BizTalk\POC\ExposeSchemaAsWebService\ExposeSchemaAsWebService\obj\Debug\ExposeSchemaAsWebService.btprojAssemblyReference.cache
+C:\Users\ramanarajan.d\OneDrive - MSC\BizTalk\POC\ExposeSchemaAsWebService\ExposeSchemaAsWebService\obj\Debug\ExposeSchemaAsWebService.dll
+C:\Users\ramanarajan.d\OneDrive - MSC\BizTalk\POC\ExposeSchemaAsWebService\ExposeSchemaAsWebService\obj\Debug\ExposeSchemaAsWebService.pdb
